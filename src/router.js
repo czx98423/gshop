@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Msite from './components/pages/Msite'
+import Login from './components/pages/Login'
+import Search from './components/pages/Search'
+import Order from './components/pages/Order'
+import Profile from './components/pages/Profile'
+
 
 Vue.use(Router)
 
@@ -9,17 +14,41 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path:'/',
+      redirect:'msite'
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    }
+      path:'/msite',
+      component:Msite,
+      meta:{
+        showFooter:true
+      }
+    },
+    {
+      path:'/order',
+      component:Order,
+      meta:{
+        showFooter:true
+      }
+    },
+    {
+      path:'/search',
+      component:Search,
+      meta:{
+        showFooter:true
+      }
+    },
+    {
+      path:'/profile',
+      component:Profile,
+      meta:{
+        showFooter:true
+      }
+    },
+    {
+      path:'/login',
+      component:Login
+    },
+    
   ]
 })
