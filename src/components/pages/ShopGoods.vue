@@ -1,6 +1,6 @@
 <template>
     <div>
-        goods
+        goods33333
     </div>
 </template>
 <script>
