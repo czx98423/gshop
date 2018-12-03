@@ -1,6 +1,6 @@
 <template>
     <div>
-        goods
+        goodssss
     </div>
 </template>
 <script>
