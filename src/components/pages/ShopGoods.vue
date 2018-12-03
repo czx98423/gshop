@@ -1,6 +1,6 @@
 <template>
     <div>
-        goodssss+master change
+        goodssss+master2 change
     </div>
 </template>
 <script>
